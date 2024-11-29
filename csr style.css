@@ -1,0 +1,560 @@
+* {
+    box-sizing: border-box; /* Include padding and border in element's total width */
+    
+  }
+body {
+    font-family: 'Roboto', sans-serif;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+    /* Set a gradient background color */
+    background: linear-gradient(to bottom, #ffffff, #E7E7E9);
+    /* Optional: set a fallback solid color in case the gradient is not supported */
+    background-color: #DFDFDF;
+}
+body, html {
+    overflow-x: hidden;
+}
+
+
+
+.csr-content{
+    padding:20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*All Section Title Styling */
+.section-title {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1f1f1f;
+    margin-bottom: 10px;
+}
+
+/* Horizontal line under the Title */
+.section-hr {
+    width: 60px;
+    height: 4px;
+    background-color: #212529;
+    border: none;
+    margin: 0 auto;
+  
+    margin-bottom: 30px;
+}
+
+.headline-underline{
+    width: 60px;
+    height: 4px;
+    background-color: #eb5204;
+}
+
+
+
+
+
+
+
+
+
+/* Sticky Navbar */
+/* Default styles for mobile */
+.navbar-brand img {
+    height: 25px;
+    margin-top: -20px; /* Reset margin for mobile */
+}
+
+/* Desktop-specific styles */
+@media (min-width: 768px) {
+    .navbar-brand img {
+        margin-top: 9px; /* Adjust this value as needed */
+        padding-left: 40px;
+        height: 40px;
+    }
+}
+
+header {
+    position: fixed!important;
+    top: 0; /* Sticks the navbar to the top of the viewport */
+    z-index: 1000; /* Ensure it's on top of other content */
+    height: 75px;
+    border-bottom: 3px solid rgba(153, 153, 153, 0.634); /* Red bottom border */
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.5); /* Red shadow */
+    width: 100%;
+}
+header a {
+    margin-top: -20px; /* Push links up */
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Set link color */
+    font-size: larger;
+    font-weight:bolder!important; /* Optional: Bold text for links */
+}
+/* Desktop position */
+@media only screen and (min-width: 769px) {
+    header a {
+        font-family: 'Afacad Flux', sans-serif; /* Apply the font to headings */
+    }}
+/* Mobile Nav Styles */
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    right: -300px; /* Start off-screen */
+    width: 300px;
+    height: 100%;
+
+    /* Glassmorphism effect */
+    background-color: rgba(255, 255, 255, 0.1); /* Fallback for unsupported browsers */
+    -webkit-backdrop-filter: blur(11px); /* Safari */
+    backdrop-filter: blur(20px); /* Modern browsers */
+
+    border-left: 1px solid rgba(255, 255, 255, 0.2); /* Optional border */
+    color: #fff;
+    padding: 20px;
+    transition: right 0.3s ease; /* Smooth transition */
+    z-index: 999; /* On top of other elements */
+    border-color: #000000;
+}
+/* Fallback for iPhones and other browsers that don't support backdrop-filter */
+@supports not ((-webkit-backdrop-filter: blur(11px)) or (backdrop-filter: blur(11px))) {
+    .mobile-nav {
+        background: rgba(255, 255, 255, 0.6); /* Slightly more opaque fallback */
+    }
+}
+/* When the nav is visible */
+.mobile-nav.visible {
+    right: 0; /* Slide in */
+}
+
+/* Remove border and outline from navbar-toggler */
+.navbar-toggler {
+    border: none; /* Remove border */
+    outline: none; /* Remove outline */
+    background: none; /* No background */
+    cursor: pointer; /* Pointer on hover */
+    padding-bottom: 50px;
+}
+
+/* Optional: Add hover effect */
+.navbar-toggler:hover {
+    background-color: none; /* Subtle hover effect */
+    outline: none;
+}
+
+/* Close button */
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 2rem;
+    color: #ff2600;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+/* Nav Links */
+.mobile-nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobile-nav li {
+    margin: 20px 0; /* Space between links */
+    padding-top: 10px;
+    font-weight: bold;
+    line-height: 1.4; /* Adjust line height */
+    font-size: 1rem;
+}
+.mobile-nav a:hover {
+    color: #aa3c3c; /* Darker color on hover */
+}
+.mobile-nav a {
+    color: rgb(0, 0, 0); /* Link color */
+    text-decoration: none;
+    font-size: 1.4em; /* Font size */
+}
+
+/* Import Pacifico font (script-style but professional) */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+/* Social Media Heading */
+.social-heading {
+    padding-top: 50px;
+    font-family: 'Pacifico', cursive; /* Apply Pacifico script font */
+    font-size: 1.5em; /* Set font size */
+    color: #ff2600; /* Text color */
+    text-align: center; /* Center the text */
+    margin-bottom: 15px; /* Space below heading */
+}
+
+.social-heading a {
+    color: #ff2600; /* Link color */
+    text-decoration: none; /* Remove underline */
+}
+
+.social-heading a:hover {
+    color: #c0192b; /* Darker color on hover */
+}
+
+/* Social Media Icons Centering */
+.social-media {
+    margin-top: 10px; /* Space between heading and icons */
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center icons */
+    margin-bottom: 20px; /* Space from bottom */
+}
+
+.social-media a {
+    color: rgb(0, 0, 0); /* Link color */
+    text-decoration: none;
+    font-size: 1.5em; /* Icon size */
+    margin: 0 10px; /* Space between icons */
+}
+
+/* Optional: Add hover effect */
+.social-media a:hover {
+    color: #ff2600; /* Change color on hover */
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none; /* Hide on larger screens */
+    }
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #ffffff; /* White background for the dropdown */
+    border: 1px solid #1A689D; /* Border color matching your theme */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.dropdown-item {
+    color: #1A689D; /* Text color */
+    padding: 20px 15px; /* Padding for better spacing */
+    transition: background-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.dropdown-item:hover {
+    margin: auto;
+    background-color: #1A689D; /* Background color on hover */
+    color: #ffffff; /* Text color on hover */
+}
+
+.dropdown-item:focus {
+    outline: none; /* Remove outline on focus */
+    background-color: #1A689D; /* Consistent background on focus */
+    color: #ffffff; /* Text color on focus */
+}
+@media (max-width: 768px) {
+    /* Style for the collapsible submenu */
+    #businessCareer {
+        padding-left: 30px; /* Add left padding for space */
+    }
+ 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+section {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  
+}
+
+h2, h3 {
+    text-align: center;
+    color: #333;
+}
+
+h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 1.5rem; /* Adjust this size as needed for mobile */
+        font-weight: bold;
+    }
+
+}
+
+/* Desktop-specific styles }*/
+@media (min-width: 768px) {
+   h3 {
+
+    text-align: left!important;
+    
+}}
+
+
+h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: #555;
+    text-align: center;
+    
+}
+h4 {
+    font-size: 0.8rem;
+    margin-bottom: 15px;
+    color: #555;
+    margin-left: 35px;
+}
+p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+    color: #666;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+
+
+
+/* Gallery Styles */
+.gallery-container {
+    margin-top: 10px;
+    text-align: center;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Default to desktop layout */
+    gap: 15px;
+    margin-bottom: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    cursor: pointer;
+}
+
+.gallery-grid img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Modal for zoomable images */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    padding-top: 90px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Modal Image Content */
+.modal-content {
+    margin: auto;
+    display: block;
+    max-width: 90%; /* Reduced to make it fit better on desktop */
+    max-height: 80vh; /* Ensure image fits within viewport height */
+    width: auto;
+    height: auto;
+    border-radius: 8px;
+}
+
+.modal-content:hover {
+    transform: scale(1.02);
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 60px;    /* Reduced distance from the top */
+    right: 40px;  /* Reduced distance from the right */
+    color: white;
+    font-size: 35px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1001;  /* Ensure it stays above the image */
+}
+
+/* For medium desktops (992px to 1199px) */
+@media (min-width: 772px) {
+    /* Styles specific to medium desktops */
+    .close {
+        right: 550px;  /* Reduced distance from the right */
+    }
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 images per row on mobile */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+.top{
+    padding-top: 105px;
+    background-color: #f4f4f4;
+}
+
+
+
+
+
+
+
+
+
+.footer-section {
+    background: linear-gradient(to bottom, #303030, #090909);
+    color: #ffffff; /* White text color for contrast */
+    padding: 40px 20px; /* Padding for top and bottom */
+}
+
+.footer-content {
+    display: flex; /* Use flexbox to arrange columns */
+    justify-content: space-between; /* Space between columns */
+    align-items: flex-start; /* Align items to the top */
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.footer-column {
+    flex: 1; /* Each column takes equal width */
+    padding: 0 20px; /* Side padding for columns */
+    min-width: 250px; /* Minimum width for responsiveness */
+}
+
+.footer-title {
+    color: white;
+    font-size: 20px; /* Font size for the title */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.footer-description {
+    font-size: 16px; /* Font size for the description */
+    font-style: italic; /* Make it appear like a quote */
+    margin: 0; /* Remove default margin */
+    padding-left: 20px; /* Indentation for the blockquote */
+    border-left: 5px solid #ffffff; /* Left border for quote style */
+}
+
+.social-icons {
+    padding-top: 30px;
+    padding-bottom: 20px;
+    display: flex;
+    flex-direction: column; /* Arrange title and icons in a column */
+    align-items: center; /* Center social media section */
+}
+
+.social-icons h3 {
+    margin-bottom: 10px; /* Space below Social Media title */
+}
+
+.social-icons ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove padding */
+    margin: 0; /* Remove margin */
+    display: flex; /* Display icons horizontally */
+    justify-content: center; /* Center the icons horizontally */
+}
+
+.social-icons li {
+    margin-right: 10px; /* Space between icons */
+}
+
+.social-icons li:last-child {
+    margin-right: 0; /* Remove margin from last icon */
+}
+
+.social-icons a {
+    color: #e0202b; /* Red color for icons */
+    font-size: 30px; /* Icon size */
+    transition: transform 0.2s; /* Animation on hover */
+}
+
+.social-icons a:hover {
+    transform: scale(1.1); /* Scale effect on hover */
+}
+
+.subscribe-form {
+    display: flex;
+    flex-direction: column; /* Stack input and button vertically */
+    align-items: center; /* Center the form fields and button */
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column; /* Stack input fields vertically */
+    margin-bottom: 10px; /* Space between inputs */
+    width: 100%; /* Full width for inputs */
+    max-width: 300px; /* Maximum width for inputs */
+    padding-right: 130px;
+}
+
+.subscribe-form input {
+    padding: 10px; /* Padding for the input */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    font-size: 16px; /* Font size for the input */
+    width: 180%; /* Full width for input fields */
+}
+
+.subscribe-form button {
+    padding: 10px 20px; /* Padding for the button */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #e0202b; /* Button color */
+    color: white; /* Text color */
+    font-size: 16px; /* Font size for the button */
+    cursor: pointer; /* Pointer on hover */
+    width: 100%; /* Full width for the button */
+    max-width: 300px; /* Maximum width for the button */
+    text-align: center; /* Center the button text */
+}
+
+.subscribe-form button:hover {
+    background-color: #c0192b; /* Darker shade on hover */
+}
